@@ -6,6 +6,13 @@
 </template>
 
 <style>
+:root{
+  --primaryColor : #7F0000
+  --secondaryColor: #140005
+}
+.topNavBar{
+  background-color: var(--primaryColor);
+}
 .feat-img{
   width: 100%;
   height: 600px;
@@ -19,19 +26,11 @@ h6{
   padding: 4px;
 }
 .wellcome-sec{
-  background-color: #7F0000;
+  background-color: var(--primaryColor);
   color: white;
   text-align: center;
 }
-.care-img{
-  position: relative;
-  height: auto;
-  width: 50%;
-  min-width: 880px;
-}
-.wel-text{
-  padding-top: 130px;
-}
+
 .care-text{
   position: relative;
   height: auto;
@@ -42,10 +41,11 @@ h6{
 .care_title {
   position: relative;
   margin: 20px 0;
-  color: #7F0000;
+  color: var(--primaryColor);
 }
+
 .care_title span::before {
-  background: #7f0000;
+  background: var(--primaryColor);
   transition-duration: 0.3s;
   transition-property: all;
   content: "";
@@ -57,7 +57,11 @@ h6{
   display: block;
 }
 .btn{
-  background-color: #7F0000;
+  background-color: var(--primaryColor);
   color: white;
+}
+
+.bgPrimary{
+  background-color: var(--primaryColor);
 }
 </style>
