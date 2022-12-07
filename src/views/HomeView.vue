@@ -49,8 +49,8 @@
 
    <!-- Section 3 -->
    <div class="py-5 ">
-    <div class="container">
-      <h2 style="text-align:center ;">Pets Must Haves</h2>
+    <h2 style="text-align:center;">Pets Must Haves</h2>
+    <div class="container py-5">
       <div class="row">
         <div class="col-md-2">
           <img src="../assets/hemp oil.jpg" alt="" class="pet-img">
@@ -86,7 +86,7 @@
           <div class="col-md-6">
               <div class="d-flex align-items-center h-100 ">
                   <div>
-                      <h1 class="text-white">Animal Care</h1>
+                      <h1 class="text-white">Welcome New Clients</h1>
             <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptas harum impedit neque. Aspernatur, vero iste sequi, dicta commodi dolore ad iure laudantium vel tenetur quidem ipsam placeat sapiente maiores! Eius aspernatur possimus harum molestias? Aliquid eveniet aspernatur recusandae consequatur.</p>
                   </div>
               </div>

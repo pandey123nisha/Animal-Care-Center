@@ -7,11 +7,16 @@
 
 <style>
 :root{
-  --primaryColor : #7F0000
+  --primaryColor : #7F0000;
   --secondaryColor: #140005
 }
 .topNavBar{
   background-color: var(--primaryColor);
+}
+.nav-link{
+  color: black;
+  font-weight: bold;
+  margin: 0px 15px 0px 15px;
 }
 .feat-img{
   width: 100%;

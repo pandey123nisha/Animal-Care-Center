@@ -12,31 +12,33 @@
 
         <nav class="navbar navbar-expand-lg bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><img src="../assets/logo (1).png" alt="Max-width 100%" style="height: 45px; "></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#"   @click.prevent="$router.push({ name: 'home' })">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link active" aria-current="page" href="#"   @click.prevent="$router.push({ name: 'about' })">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link active" aria-current="page" href="#"   @click.prevent="$router.push({ name: 'contact' })">Contact</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"   @click.prevent="$router.push({ name: 'service' })">Service</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active " aria-current="page" href="#"  @click.prevent="$router.push({ name: 'doctors' })">Doctors</a>
+        </li>
+        <div class="input-group rounded">
+          <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+          <span class="input-group-text border-0" id="search-addon">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
       </ul>
     </div>
   </div>
@@ -47,10 +49,7 @@
 <script>
 export default {
     name: "NavbarComponent",
-    data:() => ({
-      active: 'home',
-      activeSidebar: false
-    })
+    
 }
 </script>
 
