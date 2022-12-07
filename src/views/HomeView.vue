@@ -1,7 +1,7 @@
 <template>
   <template-view>
-   <!-- banner section -->
-   <div class="container">
+   <!-- Section 1 -->
+   <div>
     <div class="row">
       <div class="col-md-12">
         <carousel-component/>
@@ -9,41 +9,37 @@
     </div>
    </div>
 
-   <!-- wellcare section -->
-   <div class="py-5">
-    <div class="container-fluid">
+   <!-- Section 2 -->
+   <div class="py-5 bg-light">
+    <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <img src="../assets/Dental-Care-Section (1).jpg" class="care-img">
+          <img src="../assets/Dental-Care-Section (1).jpg" class="img-fluid rounded-3">
         </div>
         <div class="col-md-6">
-          <div class="care-text">
-            <h2  class="care_title">Complete Wellness Care</h2>
-            <h5>Routine wellness exams are a critical part of your pet’s healthcare routine to maintain 
+          <div class="d-flex align-items-center h-100">
+            <div class="">
+            <h2  class="">Complete Wellness Care</h2>
+            <p>Routine wellness exams are a critical part of your pet’s healthcare routine to maintain 
               their wellbeing and detect any medical issues before they progress. 
               During your pet’s wellness exam, we will conduct an in-depth, nose to tail 
-              examination and advise you on all aspects of your pet's care.</h5>
-              <h3 class="care_title">Comprehensive Care</h3>
+              examination and advise you on all aspects of your pet's care.</p>
+              <h3 class="">Comprehensive Care</h3>
               <div class="row">
                 <div class="col-md-4">
-                  <div>
                     <h6>+ Preventative Services</h6>
-                  </div>
                 </div>
                 <div class="col-md-4">
-                  <div>
                     <h6>+ Surgical Services</h6>
-                  </div>
                 </div>
                 <div class="col-md-4">
-                  <div>
                     <h6>+ Diagnostics</h6>
-                  </div>
                 </div>
               </div>
               <div class="py-3">
                 <button type="button" class="btn ">View Our services</button>
               </div>
+          </div>
           </div>
           
         </div>
@@ -51,8 +47,8 @@
     </div>
    </div>
 
-   <!-- pet must have -->
-   <div class="py-5">
+   <!-- Section 3 -->
+   <div class="py-5 ">
     <div class="container">
       <h2 style="text-align:center ;">Pets Must Haves</h2>
       <div class="row">
@@ -84,68 +80,45 @@
     </div>
    </div>
 
-   <!-- welcome section -->
-   <div class="py-5">
-    <div class="wellcome-sec">
+   <div class="bgPrimary py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-           <div class="wel-text">
-            <h2>Welcome New Clients</h2>
-            <div>
-              <h5>(+977) 9478594577</h5>
-            </div>
-            <div>
-              <h5>Our Animal Care Center welcomes you and your pet! Here at animal care center, 
-                we always welcome new clients and patients to our full-service veterinary hospital. 
-                We encourage you to explore our services and call with any questions.</h5>
-            </div>
-           </div>
+              <div class="d-flex align-items-center h-100 ">
+                  <div>
+                      <h1 class="text-white">Animal Care</h1>
+            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptas harum impedit neque. Aspernatur, vero iste sequi, dicta commodi dolore ad iure laudantium vel tenetur quidem ipsam placeat sapiente maiores! Eius aspernatur possimus harum molestias? Aliquid eveniet aspernatur recusandae consequatur.</p>
+                  </div>
+              </div>
           </div>
+
           <div class="col-md-6">
-            <img src="../assets/dog_meow-removebg-preview.png" alt="" >
+            <img src="../assets/dog_meow-removebg-preview.png" alt="" class="img-fluid">
           </div>
         </div>
       </div>
-    </div>
    </div>
 
-   <!-- learn more -->
-   <div class="py-3">
-    <h2 style="text-align:center ;">Learn more about Animal Care Center</h2>
-    <div class="container">
+
+   <!-- Section 5 -->
+   <div class="py-5">
+    <h2 style="text-align:center">Learn more about Animal Care Center</h2>
+    <div class="container py-5">
       <div class="row">
         <div class="col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../assets/cat dog.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
+            <learn-more/>
         </div>
         <div class="col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../assets/img2.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
+            <learn-more/>
+
         </div>
         <div class="col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../assets/img3.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
+            <learn-more/>
+         
         </div>
         <div class="col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../assets/img1.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
+            <learn-more/>
+          
         </div>
       </div>
     </div>
@@ -158,12 +131,14 @@
 // @ is an alias to /src
 import CarouselComponent from '@/components/CarouselComponent.vue';
 import TemplateView from '@/views/TemplateView'
+import LearnMore from '@/components/LearnMore.vue'
 
 export default {
   name: 'HomeView',
   components: {
     TemplateView,
     CarouselComponent,
+    LearnMore
   }
 }
 </script>

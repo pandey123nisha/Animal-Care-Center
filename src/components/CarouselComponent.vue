@@ -43,8 +43,19 @@
 </script>
 
 <style  scoped>
-.carouselExampleDark{
-  width: 100%;
-  height: 100%;
-}
+  .carousel{
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+  }
+  .carousel-item{
+    width: 100%;
+    max-height: 600px;
+  }
+
+  .carousel-item img{
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+  }
 </style>

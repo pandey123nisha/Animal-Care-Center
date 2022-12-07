@@ -1,53 +1,46 @@
 <template>
     <div>
       <!-- head header -->
-      <template>
-        <div class="hidden">
-            <vs-navbar shadow square center-collapsed class="navbar">
-                <vs-navbar-item >
-                    24/7 Animal Care Center: (+977) 9478594577
-                </vs-navbar-item>
-                <template>
-                    <vs-button flat class="appointment">Book an Appointment</vs-button>
-                </template>
-            </vs-navbar>
+        <div class="topNavBar py-2">
+          <div class="container d-flex justify-content-center align-items-center">
+              <div class="text-white">Animal Care Center (+977-9862130505)</div>
+              <div class="mx-md-5">
+                  <a href="" class="btn appointment">Book an appointment</a>
+              </div>
+          </div>
         </div>
-    </template>
 
-        <!-- bottom header -->
-        <div class="bottom-header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-                  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand"><img src="../assets/logo (1).png" class="logo-img"></a>
-                    <ul class="navbar-nav ms-auto">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/"  @click.prevent="$router.push({name:'home'})">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" @click.prevent="$router.push({name:'about'})">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Toxin Nails</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Service</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Our Doctors</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Contact</a>
-                      </li>
-                    </ul>
-                    <form class="d-flex">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
-                  </div>
-                </div>
-              </nav>
-        </div>
-       
+        <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     </div>
 </template>
 
@@ -62,10 +55,7 @@ export default {
 </script>
 
 <style scoped>
-.navbar{
-    background-color: #7F0000;
-    color: white;
-}
+
 
 .appointment{
     color: #7F0000;
@@ -73,14 +63,7 @@ export default {
     font-weight: bold;
     padding: 0px 10px 0px 10px
 }
-.logo-img{
-    width: 50px;
-}
-.nav-item{
-    font-weight: bold;
-    padding: 0px 25px 0px 25px;
-}
-.bottom-header{
-    padding: 50px 0px 0px 0px;
-}
+
+
+
 </style>
