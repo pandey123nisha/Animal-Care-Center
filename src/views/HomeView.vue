@@ -16,7 +16,7 @@
           <div class="col-md-6">
             <img
               src="../assets/Dental-Care-Section (1).jpg"
-              class="img-fluid rounded-2"
+              class="img-fluid rounded-3"
             />
           </div>
           <div class="col-md-6">
