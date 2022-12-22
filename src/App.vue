@@ -4,11 +4,23 @@
     <router-view/>
   </div>
 </template>
+<script>
+import { mapGetters } from 'vuex';
 
+export default {
+  methods :{
+    ...mapGetters(['fetchDoctor'])
+  },
+  created (){
+    this.fetchDoctor()
+  }
+}
+
+</script>
 <style>
 :root{
   --primaryColor : #7F0000;
-  --secondaryColor: #140005
+  --secondaryColor: #140005;
 }
 .topNavBar{
   background-color: var(--primaryColor);

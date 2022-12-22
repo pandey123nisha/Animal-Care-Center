@@ -3,7 +3,7 @@
       <!-- head header -->
         <div class="topNavBar py-2">
           <div class="container d-flex justify-content-center align-items-center">
-              <div class="text-white">Animal Care Center (+977-9862130505)</div>
+              <div class="text-white">Animal Care Center: (+977-9862130505)</div>
               <div class="mx-md-5">
                   <a href="" class="btn appointment">Book an appointment</a>
               </div>

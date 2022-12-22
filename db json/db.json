@@ -1,0 +1,19 @@
+{
+  "doctor": [
+    {
+      "id": 1,
+      "education": "MBBS",
+      "photo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F446%2F038%2Foriginal%2Fvet-and-dog-at-clinic-vector.jpg&f=1&nofb=1&ipt=cb056a02fbf8221e755298df6caaf9e430207a3963e9719202d8867a8e531055&ipo=images"
+    },
+    {
+      "id": 2,
+      "education": "MBBS",
+      "photo": "http://www.freepngclipart.com/download/dog/81844-physician-beauty-doctor-pet-holds-dog-cat.png"
+    },
+    {
+      "id": 3,
+      "education": "MBBS",
+      "photo": "https://c8.alamy.com/comp/PB056K/veterinarian-doctor-holds-dog-on-examination-table-in-vet-clinic-vector-cartoon-illustration-pets-health-care-background-domestic-animals-treatment-PB056K.jpg"
+    }
+  ]
+}
