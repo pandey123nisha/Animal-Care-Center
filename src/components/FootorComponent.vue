@@ -28,7 +28,7 @@
             </a>
             <a href="">
               <p>Emergency</p>
-            </a> 
+            </a>
           </div>
         </div>
         <div class="col-md-2">
@@ -90,14 +90,21 @@
               </div>
             </form>
             <a href="" class="button">
-              <button type="button" class="btn">Sign Up</button>
+              <vs-button
+                circle
+                color="#7F0000"
+                :active="active == 2"
+                @click="active = 2"
+              >
+                <i class="bx bxs-heart"></i> Sign Up
+              </vs-button>
             </a>
           </div>
           <div class="icons">
             <div class="d-flex">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-               <a href=""> <i class="fa-brands fa-instagram"></i></a>
-                <a href=""> <i class="fa-brands fa-youtube"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""> <i class="fa-brands fa-instagram"></i></a>
+              <a href=""> <i class="fa-brands fa-youtube"></i></a>
             </div>
           </div>
         </div>
@@ -113,9 +120,9 @@ export default {
 </script>
 
 <style scoped>
-.logo-image{
+.logo-image {
   width: 80px;
- margin: 30px 0px 0px 110px;
+  margin: 30px 0px 0px 110px;
 }
 .footor {
   background-color: #140005;
@@ -134,14 +141,12 @@ a {
   color: #7f0000;
 }
 .btn {
-    background-color: #7f0000;
+  background-color: #7f0000;
   color: white;
 }
 .button {
-
   display: flex;
   justify-content: center;
-  
 }
 .footer_title {
   position: relative;
@@ -161,75 +166,77 @@ a {
 }
 
 .newsletter-subscribe {
-    font-size: 16px;
-    max-width: 362px;
-    padding: 16px 24px;
-  }
-  
-  .newsletter-subscribe,
-  .newsletter-subscribe input,
-  .newsletter-subscribe button {
-    font-familyXXX: Georgia;
-  }
-  
-  .newsletter-subscribe div {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-  
-  .newsletter-subscribe label {
-    width: 80%;
-    margin-left: 45px;
-  }
-  
-  .newsletter-subscribe input {
-    border: none;
-    border-bottom: 1px solid #666666;
-    background-color: transparent;
-    width: 100%;
-    padding: 8px 0;
-  }
-  
-  .newsletter-subscribe input:hover,
-  .newsletter-subscribe input:focus {
-    border-bottom: 1px solid #0093ec;
-  }
-  
-  .newsletter-subscribe input:focus {
-    outline: none;
-  }
-  
-  input::-webkit-input-placeholder {
-    transition: color 0.4s ease-in-out;
-  }
-  
-  input:hover::-webkit-input-placeholder,
-  input:focus::-webkit-input-placeholder{
-    color: #ccc;
-  }
-  
-  .newsletter-subscribe button {
-    font-size: 14px;
-    line-height: 1;
-    border: none;
-    border-radius: 34px;
-    height: 34px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    transition: background-color 0.4s ease-in-out,border-color 0.4s ease-in-out,color 0.4s ease-in-out;
-  }
-  
-  .newsletter-subscribe button:hover, .newsletter-subscribe button:focus {
-      background-color: #0073b9;
-  }
-  .icons{
-    color: white;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0px 0px 0px;
-  }
-  .fa-brands{
-    padding: 10px;
-  }
+  font-size: 16px;
+  max-width: 362px;
+  padding: 16px 24px;
+}
+
+.newsletter-subscribe,
+.newsletter-subscribe input,
+.newsletter-subscribe button {
+  font-familyxxx: Georgia;
+}
+
+.newsletter-subscribe div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.newsletter-subscribe label {
+  width: 80%;
+  margin-left: 45px;
+}
+
+.newsletter-subscribe input {
+  border: none;
+  border-bottom: 1px solid #666666;
+  background-color: transparent;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.newsletter-subscribe input:hover,
+.newsletter-subscribe input:focus {
+  border-bottom: 1px solid #0093ec;
+}
+
+.newsletter-subscribe input:focus {
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  transition: color 0.4s ease-in-out;
+}
+
+input:hover::-webkit-input-placeholder,
+input:focus::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.newsletter-subscribe button {
+  font-size: 14px;
+  line-height: 1;
+  border: none;
+  border-radius: 34px;
+  height: 34px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out,
+    color 0.4s ease-in-out;
+}
+
+.newsletter-subscribe button:hover,
+.newsletter-subscribe button:focus {
+  background-color: #0073b9;
+}
+.icons {
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px 0px 0px;
+}
+.fa-brands {
+  padding: 10px;
+}
 </style>
