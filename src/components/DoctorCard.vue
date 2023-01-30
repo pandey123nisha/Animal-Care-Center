@@ -1,27 +1,21 @@
 <template>
     <div>
-        <vs-card type="3">
+        <vs-card type="5">
             <template #title>
-              <h3>{{doctor.name}}</h3>
+              <h3>{{doctor.first_name}} {{doctor.last_name}}</h3>
             </template>
             <template #img>
-              <img :src="doctor.photo" alt="">
+              <img :src="doctor.image" alt="">
             </template>
             <template #text>
               <p>
-                {{doctor.education }}
+                {{doctor.specialist }}
               </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
+              <p>
+                <i class="fa-solid fa-square-phone"></i> {{doctor.phone}}
+               
+                </p>
+                <p><i class="fa-solid fa-envelope"></i> {{ doctor.email }}</p>
             </template>
           </vs-card>
         

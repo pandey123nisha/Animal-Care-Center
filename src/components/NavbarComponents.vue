@@ -1,9 +1,10 @@
 <template>
     <div>
+
       <!-- head header -->
         <div class="topNavBar py-2">
           <div class="container d-flex justify-content-center align-items-center">
-              <div class="text-white">Animal Care Center: (+977-9862130505)</div>
+              <div class="text-white">{{ company.name }}: ({{ company.contact }})</div>
               <div class="mx-md-5">
                   <a href="" class="btn appointment">Book an appointment</a>
               </div>
@@ -12,7 +13,7 @@
 
         <nav class="navbar navbar-expand-lg bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#"><img src="../assets/logo (1).png" alt="Max-width 100%" style="height: 45px; "></a>
+    <a class="navbar-brand" href="#"><img :src="company.logo" alt="Max-width 100%" style="height: 45px; "></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -47,8 +48,14 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
     name: "NavbarComponent",
+    computed:{
+      ...mapGetters({
+        company : 'get_company'
+      })
+    }
     
 }
 </script>

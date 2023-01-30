@@ -48,7 +48,7 @@
                     color="#7F0000"
                     
                     :active="active == 2"
-                    @click="active = 2"
+                    @click.prevent="$router.push({name:'service'})"
                   >
                     <i class="bx bxs-heart"></i> View Our services
                   </vs-button>
@@ -62,37 +62,14 @@
 
     <!-- Section 3 -->
     <div class="py-5">
-      <h2 style="text-align: center">Pets Must Haves</h2>
+      <h2 style="text-align: center">Our Services</h2>
       <div class="container py-5">
-        <div class="row">
-          <div class="col-md-2">
-            <img src="../assets/hemp oil.jpg" alt="" class="pet-img" />
-            <h6>Hemp Oil For Pets</h6>
+        <div class="row g-4">
+          <div class="col-md-2" v-for="(service,index) in services" :key="index" @click.prevent="$router.push({name:'service'})">
+            <img :src="service.image" alt="" class="pet-img" style="height:120px;objectFit:cover" />
+            <span style="fontSize:14px">{{ service.title.substring(0,25) + "..." }}</span>
           </div>
-          <div class="col-md-2">
-            <img src="../assets/BrushySticks.jpg" alt="" class="pet-img" />
-            <h6>Pet Hip & Joint Supplements</h6>
-          </div>
-          <div class="col-md-2">
-            <img
-              src="../assets/allergyitch-pouch-1.jpg"
-              alt=""
-              class="pet-img"
-            />
-            <h6>Pets Allergy Supplements</h6>
-          </div>
-          <div class="col-md-2">
-            <img src="../assets/SeniorDog.jpg" alt="" class="pet-img" />
-            <h6>Pets Dental Care</h6>
-          </div>
-          <div class="col-md-2">
-            <img src="../assets/HipJoint-1.jpg" alt="" class="pet-img" />
-            <h6>Senior Pet Care & Pain Relief</h6>
-          </div>
-          <div class="col-md-2">
-            <img src="../assets/FoodTopper.jpg" alt="" class="pet-img" />
-            <h6>All Natural Pet Food Toppers</h6>
-          </div>
+         
         </div>
       </div>
     </div>
@@ -104,9 +81,7 @@
             <div class="d-flex align-items-center h-100">
               <div>
                 <h1 class="text-white">Greetings </h1>
-                <p class="text-white">
-                 We offers high quality, comprehensive vet care in locations near you. Anticipate Your Pets' Health Needs and Avoid Costly Treatments. Affordable Rates. Online Booking. Same Day Appointments. High Tech Clinics. Top Customer Service. Low Cost Pricing.
-                </p>
+                <div v-html="about.description" class="text-white"></div>
               </div>
             </div>
           </div>
@@ -150,6 +125,7 @@
 import CarouselComponent from "@/components/CarouselComponent.vue";
 import TemplateView from "@/views/TemplateView";
 import LearnMore from "@/components/LearnMore.vue";
+import { mapGetters } from 'vuex';
 
 export default {
   name: "HomeView",
@@ -158,5 +134,28 @@ export default {
     CarouselComponent,
     LearnMore,
   },
+  computed:{
+    ...mapGetters({
+      abouts: 'get_abouts',
+      services : 'get_services'
+    }),
+
+    about(){
+      return this.abouts.find((v) => v.slug == 'about-us')
+    }
+  }
 };
 </script>
+
+<style scoped>
+.pet-img{
+  filter: grayscale();
+  transition: 1s;
+}
+
+
+.pet-img:hover{
+  filter: none;
+  
+}
+</style>

@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-3">
           <img
-            src="../assets/white-dog-paw-png-removebg-preview.png"
+            :src="company.logo"
             alt=""
             class="logo-image"
           />
@@ -59,13 +59,13 @@
               <p>Medical Assistance:</p>
             </a>
             <a href="">
-              <p class="fot-color">(+977) 9478594577</p>
+              <p class="fot-color">{{ company.contact }}</p>
             </a>
             <a href="">
               <p>Non-medical Assistance:</p>
             </a>
             <a href="">
-              <p class="fot-color">info@animalcarecenter.com</p>
+              <p class="fot-color">{{ company.email }}</p>
             </a>
           </div>
         </div>
@@ -102,9 +102,9 @@
           </div>
           <div class="icons">
             <div class="d-flex">
-              <a href=""><i class="fa-brands fa-facebook"></i></a>
-              <a href=""> <i class="fa-brands fa-instagram"></i></a>
-              <a href=""> <i class="fa-brands fa-youtube"></i></a>
+              <a :href="company.facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a :href="company.instagram"> <i class="fa-brands fa-instagram"></i></a>
+              <a :href="company.youtube"> <i class="fa-brands fa-youtube"></i></a>
             </div>
           </div>
         </div>
@@ -114,8 +114,15 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
   name: "FootorComponent",
+
+  computed:{
+    ...mapGetters({
+      company : 'get_company'
+    })
+  }
 };
 </script>
 

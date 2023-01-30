@@ -1,9 +1,11 @@
 <template>
     <template-view>
-      <div class="container">
+      <div class="container py-5">
         <div class="row" style="padding-bottom: 20px;">
-          <div class="col-md-3" v-for="(doctor,index) in doctor" :key="index">
-            <doctor-card :doctor="doctor"/>
+          <div class="col-md-3" v-for="(doctor,index) in doctors" :key="index">
+              <div @click.prevent="$router.push({name:'doctor-profile',params:{id:doctor.id}})">
+                  <doctor-card :doctor="doctor" />
+              </div>
         </div>
       </div>
      </div>
@@ -22,7 +24,7 @@ import { mapGetters } from 'vuex';
       },
       computed:{
         ...mapGetters({
-            doctor : 'get_doctor'
+            doctors : 'get_doctors'
         })
     }
     }

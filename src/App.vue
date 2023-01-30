@@ -5,14 +5,18 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex';
+import { mapActions } from 'vuex';
 
 export default {
   methods :{
-    ...mapGetters(['fetchDoctor'])
+    ...mapActions(['fetchDoctor','fetchCompany','fetchService','fetchAbout','fetchImages'])
   },
-  created (){
-    this.fetchDoctor()
+  created(){
+    this.fetchDoctor(),
+    this.fetchCompany(),
+    this.fetchService(),
+    this.fetchAbout(),
+    this.fetchImages()
   }
 }
 
